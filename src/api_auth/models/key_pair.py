@@ -1,6 +1,8 @@
 from django.db import models
-import hashlib
+from Crypto.PublicKey import RSA
 from django.utils.translation import ugettext_lazy as _
+
+from django.conf import settings
 
 
 class KeyPair(models.Model):
@@ -10,9 +12,17 @@ class KeyPair(models.Model):
     public_key = models.TextField()
     private_key = models.TextField()
 
-    @property
-    def hashed_public_key(self):
-        return hashlib.sha256(self.public_key.encode())
+    @classmethod
+    def generate_key_pair(cls, name):
+        key_pair = RSA.generate(settings.KEY_LENGTH)
+        private_key = key_pair.exportKey()
+        public_key = key_pair.publickey().exportKey()
+        model = cls(
+            name=name,
+            private_key=private_key.decode(),
+            public_key=public_key.decode()
+        )
+        return model
 
     class Meta:
         verbose_name = _("key_pair")
