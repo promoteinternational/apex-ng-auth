@@ -3,7 +3,6 @@ from datetime import datetime
 from hashlib import sha256
 
 from django.http.request import HttpRequest
-from django.http.response import HttpResponse
 from django.test import TestCase
 
 from api_auth.middleware import PortalAuthMiddleware
@@ -29,34 +28,6 @@ class TestMiddleware(TestCase):
         }
         request.method = "GET"
 
-        middleware = PortalAuthMiddleware()
+        middleware = PortalAuthMiddleware(None)
         result = middleware.process_request(request)
         self.assertIsNone(result)
-
-    def test_process_response(self):
-        timestamp = datetime.utcnow().isoformat()
-        signature = sha256((self.public_key + "" + timestamp + self.private_key).encode()).digest()
-        request = HttpRequest()
-        request.META = {
-            "API-Token": f"Timestamp {timestamp}",
-            "Public-Key": b64encode(self.public_key.encode()),
-            "Signature": b64encode(signature).decode(),
-        }
-        request.method = "GET"
-        response = HttpResponse()
-        response.content = b'{"hello": "world"}'
-
-        middleware = PortalAuthMiddleware()
-        new_response = middleware.process_response(request, response)
-
-        self.assertIsNotNone(new_response.get('API-Token'))
-        self.assertIsNotNone(new_response.get('Signature'))
-        self.assertEqual(len(new_response.get('API-Token').split(" ")), 2)
-
-        new_timestamp = new_response.get('API-Token').split(" ")[1]
-        encoded_body = sha256(new_response.content).digest()
-        new_signature = sha256(
-            (self.public_key + str(encoded_body) +
-             new_timestamp + self.private_key).encode()).digest()
-
-        self.assertEqual(b64encode(new_signature).decode(), new_response.get('Signature'))
