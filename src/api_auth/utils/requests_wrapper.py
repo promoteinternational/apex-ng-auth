@@ -9,7 +9,11 @@ def method_with_body(name, url, private_key, public_key, data, json=None, header
     timestamp = datetime.utcnow().isoformat()
     encoded_body = sha256(json.dumps(json if json else data).encode()).digest()
     signature = sha256((public_key + str(encoded_body) + timestamp + private_key).encode()).digest()
-    headers.update({"Signature": b64encode(signature), "API-Token": f"Timestamp {timestamp}", "Public-Key": b64encode(public_key)})
+
+    headers.update({"Signature": b64encode(signature).decode(),
+                    "API-Token": f"Timestamp {timestamp}",
+                    "Public-Key": b64encode(public_key)})
+
     result = requests.__getattribute__(name)(url=url, data=data, json=json, headers=headers, **kwargs)
     return result
 
@@ -18,7 +22,11 @@ def method_without_body(name, url, private_key, public_key, headers={}, **kwargs
     timestamp = datetime.utcnow().isoformat()
     encoded_body = sha256(b"").digest()
     signature = sha256((public_key + str(encoded_body) + timestamp + private_key).encode()).digest()
-    headers.update({"Signature": b64encode(signature), "API-Token": f"Timestamp {timestamp}", "Public-Key": b64encode(public_key)})
+
+    headers.update({"Signature": b64encode(signature).decode(),
+                    "API-Token": f"Timestamp {timestamp}",
+                    "Public-Key": b64encode(public_key)})
+
     result = requests.__getattribute__(name)(url=url, headers=headers, **kwargs)
     return result
 
