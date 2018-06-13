@@ -17,7 +17,7 @@ class PortalAuthMiddleware(MiddlewareMixin):
 
         if request.META.get("API-Token") and "Timestamp" in request.META.get("API-Token"):
             if request.method not in ["GET", "DELETE"]:
-                encoded_body = hashlib.sha256(request.body.encode()).digest()
+                encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
             else:
                 encoded_body = hashlib.sha256(b"").digest()
 

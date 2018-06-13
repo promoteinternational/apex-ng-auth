@@ -30,7 +30,8 @@ class TestMiddleware(TestCase):
         request.method = "GET"
 
         middleware = PortalAuthMiddleware()
-        middleware.process_request(request)
+        result = middleware.process_request(request)
+        self.assertIsNone(result)
 
     def test_process_response(self):
         timestamp = datetime.utcnow().isoformat()
@@ -59,5 +60,3 @@ class TestMiddleware(TestCase):
              new_timestamp + self.private_key).encode()).digest()
 
         self.assertEqual(b64encode(new_signature).decode(), new_response.get('Signature'))
-
-

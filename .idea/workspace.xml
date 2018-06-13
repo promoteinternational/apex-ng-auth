@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1641103-acc9-4291-bf33-9056c9057e2f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_auth/views/key_pair_generate_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apex-auth/local_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apex-auth/local_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apex-auth/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apex-auth/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apex-auth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apex-auth/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apex-auth/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apex-auth/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/models/key_pair.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/models/key_pair.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/requests_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/tests/test_middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api-auth/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_auth/tests/test_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/tests/test_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tooling/requirements/develop.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tooling/requirements/develop.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +16,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/apex_ng_auth$Test__api_auth_tests_test_middleware_TestMiddleware_test_process_response_get.coverage" NAME="Test: api_auth.tests.test_middleware.TestMiddleware.test_process_response_get Coverage Results" MODIFIED="1528885591612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/apex_ng_auth$Test__api_auth_tests_test_middleware_TestMiddleware.coverage" NAME="Test: api_auth.tests.test_middleware.TestMiddleware Coverage Results" MODIFIED="1528886293837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/apex_ng_auth$Test__api_auth_tests_test_requests_wrapper_TestRequestWrapper.coverage" NAME="Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper Coverage Results" MODIFIED="1528893440898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/apex_ng_auth$Test__api_auth_tests_test_middleware_TestMiddleware.coverage" NAME="Test: api_auth.tests.test_middleware.TestMiddleware Coverage Results" MODIFIED="1528892398633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/apex_ng_auth$Test__api_auth_tests_test_middleware_TestMiddleware_test_process_request_get.coverage" NAME="Test: api_auth.tests.test_middleware.TestMiddleware.test_process_request_get Coverage Results" MODIFIED="1528883706286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="DatabaseView">
@@ -79,6 +60,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="develop.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tooling/requirements/develop.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="key_pair.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api_auth/models/key_pair.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,16 +85,16 @@
         <entry file="file://$PROJECT_DIR$/src/api_auth/views/key_pair_generate_view.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="middleware.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="middleware.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api_auth/middleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="80" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
+            <state relative-caret-position="257">
+              <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -115,8 +105,8 @@
       <file leaf-file-name="requests_wrapper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            <state relative-caret-position="301">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -136,8 +126,8 @@
       <file leaf-file-name="test_middleware.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api_auth/tests/test_middleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-109">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="1">
+              <caret line="25" column="50" lean-forward="true" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -145,9 +135,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api_auth/urls.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="test_requests_wrapper.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -173,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/auth/middleware.py" />
         <option value="$PROJECT_DIR$/src/manage.py" />
         <option value="$PROJECT_DIR$/src/api-auth/models/key_pair.py" />
-        <option value="$PROJECT_DIR$/tooling/requirements/develop.txt" />
         <option value="$PROJECT_DIR$/src/apex-auth/local_settings.py" />
         <option value="$PROJECT_DIR$/src/api-auth/utils/request_wrapper.py" />
         <option value="$PROJECT_DIR$/src/api-auth/requests_wrapper.py" />
@@ -192,9 +188,11 @@
         <option value="$PROJECT_DIR$/src/api_auth/views/key_pair_generate_view.py" />
         <option value="$PROJECT_DIR$/src/apex-auth/settings.py" />
         <option value="$PROJECT_DIR$/src/api_auth/models/key_pair.py" />
-        <option value="$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py" />
         <option value="$PROJECT_DIR$/src/api_auth/middleware.py" />
+        <option value="$PROJECT_DIR$/tooling/requirements/develop.txt" />
+        <option value="$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py" />
         <option value="$PROJECT_DIR$/src/api_auth/tests/test_middleware.py" />
+        <option value="$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py" />
       </list>
     </option>
   </component>
@@ -331,7 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware">
+  <component name="RunManager" selected="Django tests.Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper">
     <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <module name="apex-ng-auth" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -389,13 +387,34 @@
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
     </configuration>
+    <configuration name="Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <module name="apex-ng-auth" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="api_auth.tests.test_requests_wrapper.TestRequestWrapper" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+    </configuration>
     <list>
       <item itemvalue="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware" />
       <item itemvalue="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware.test_process_request_get" />
       <item itemvalue="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware.test_process_response_get" />
+      <item itemvalue="Django tests.Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" />
         <item itemvalue="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware" />
         <item itemvalue="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware.test_process_response_get" />
         <item itemvalue="Django tests.Test: api_auth.tests.test_middleware.TestMiddleware.test_process_request_get" />
@@ -416,21 +435,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 28m 05s.xml">
-      <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
-    <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 28m 11s.xml">
-      <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
-    <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 33m 47s.xml">
-      <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
-    <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 34m 36s.xml">
-      <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
-    <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 36m 04s.xml">
-      <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
-    </history-entry>
     <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 36m 19s.xml">
       <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
@@ -446,9 +450,25 @@
     <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 13h 38m 14s.xml">
       <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
+    <history-entry file="Test__api_auth_tests_test_requests_wrapper_TestRequestWrapper - 2018.06.13 at 15h 17m 16s.xml">
+      <configuration name="Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__api_auth_tests_test_requests_wrapper_TestRequestWrapper - 2018.06.13 at 15h 17m 45s.xml">
+      <configuration name="Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__api_auth_tests_test_middleware_TestMiddleware - 2018.06.13 at 15h 19m 59s.xml">
+      <configuration name="Test: api_auth.tests.test_middleware.TestMiddleware" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__api_auth_tests_test_requests_wrapper_TestRequestWrapper - 2018.06.13 at 15h 34m 36s.xml">
+      <configuration name="Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__api_auth_tests_test_requests_wrapper_TestRequestWrapper - 2018.06.13 at 15h 34m 48s.xml">
+      <configuration name="Test: api_auth.tests.test_requests_wrapper.TestRequestWrapper" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -456,15 +476,15 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32923076" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32923076" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.13919415" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32923076" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.13919415" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32967034" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" sideWeight="0.5045872" side_tool="true" visible="true" weight="0.13919415" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.50427353" side_tool="true" visible="true" weight="0.13919415" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -481,7 +501,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -663,16 +683,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api-auth/utils/request_wrapper.py" />
-    <entry file="file://$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tooling/requirements/develop.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apex-auth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -704,9 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api_auth/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apex-auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -719,20 +726,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api_auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api_auth/models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api_auth/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/apex-auth/local_settings.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -755,6 +748,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/apex-auth/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api_auth/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api_auth/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api_auth/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tooling/requirements/develop.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api_auth/models/key_pair.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -765,46 +789,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apex-auth/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api_auth/views/key_pair_generate_view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api_auth/tests/test_middleware.py">
+    <entry file="file://$PROJECT_DIR$/src/api_auth/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="257">
+          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api_auth/utils/requests_wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="301">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api_auth/middleware.py">
+    <entry file="file://$PROJECT_DIR$/src/api_auth/tests/test_middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="80" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
+        <state relative-caret-position="1">
+          <caret line="25" column="50" lean-forward="true" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api_auth/tests/test_requests_wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
