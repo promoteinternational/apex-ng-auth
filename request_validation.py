@@ -14,16 +14,16 @@ def get_validation_headers(request):
     }
 
 
-def signature_is_valid(request, key_pair, timestamp, actual_signature):
+def signature_is_valid(request, public_key, private_key, timestamp, actual_signature):
     if request.method == "GET":
         encoded_body = hashlib.sha256(b"").digest()
     else:
         encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
 
     signature = hashlib.sha256(
-        (key_pair.public_key +
+        (public_key +
          str(encoded_body) +
          timestamp +
-         key_pair.private_key).encode()).digest()
+         private_key).encode()).digest()
 
     return actual_signature == b64encode(signature).decode()
