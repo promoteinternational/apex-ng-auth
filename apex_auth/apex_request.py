@@ -1,3 +1,4 @@
+from typing import Optional
 from datetime import datetime
 import hashlib
 import json
@@ -9,9 +10,11 @@ from django.http.request import HttpRequest
 
 class ApexRequest:
     @staticmethod
-    def create_request_headers(public_key: str, private_key: str, data: dict) -> dict:
+    def create_request_headers(public_key: str, private_key: str, data: Optional[dict]) -> dict:
         timestamp = datetime.utcnow().isoformat()
-        encoded_body = hashlib.sha256(json.dumps(data).encode()).digest()
+
+        encoded_body = hashlib.sha256((json.dumps(data) if data else "").encode()).digest()
+
         signature = hashlib.sha256((public_key +
                                     str(encoded_body) +
                                     timestamp +
