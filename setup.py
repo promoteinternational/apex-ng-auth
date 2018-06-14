@@ -10,7 +10,7 @@ setuptools.setup(
     author_email="andreas.kuhne@promoteint.com",
     description="",
     install_requires=[
-        "Django==2.0.5"
+        "Django>=2.0.5"
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
