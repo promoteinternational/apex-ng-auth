@@ -14,7 +14,7 @@ def get_validation_headers(request):
     }
 
 
-def is_signature_valid(request, key_pair, timestamp, actual_signature):
+def signature_is_valid(request, key_pair, timestamp, actual_signature):
     if request.method == "GET":
         encoded_body = hashlib.sha256(b"").digest()
     else:
