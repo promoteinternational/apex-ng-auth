@@ -5,10 +5,13 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name="apex_auth",
-    version="0.1.0",
+    version="0.1.2",
     author="Andréas Kühne",
     author_email="andreas.kuhne@promoteint.com",
     description="",
+    install_requires=[
+        "Django>=2.0.5"
+    ],
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/promoteinternational/apex-ng-auth",
