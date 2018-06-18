@@ -11,6 +11,7 @@ setuptools.setup(
     description="",
     install_requires=[
         "Django>=2.0.5"
+        "djangorestframework>=3.8.2"
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
