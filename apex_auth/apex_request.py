@@ -46,12 +46,15 @@ class ApexRequest:
             }
 
     @staticmethod
-    def signature_is_valid(request: HttpRequest, public_key: str, private_key: str, timestamp: str,
+    def signature_is_valid(request: Union[HttpRequest, Request], public_key: str, private_key: str, timestamp: str,
                            actual_signature: str) -> bool:
         if request.method == "GET":
             encoded_body = hashlib.sha256(b"").digest()
         else:
-            encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
+            if isinstance(request, HttpRequest):
+                encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
+            else:
+                encoded_body = hashlib.sha256(json.dumps(request.data).encode()).digest()
 
         signature = hashlib.sha256(
             (public_key +
