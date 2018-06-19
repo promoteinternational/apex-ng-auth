@@ -30,7 +30,7 @@ class ApexRequest:
     def get_validation_headers(request: Union[HttpRequest, Request]) -> dict:
         if isinstance(request, HttpRequest):
             public_key_header = request.META.get("API-Token")
-            public_key = b64decode(public_key_header)
+            public_key = b64decode(public_key_header).decode()
             return {
                 "Public-Key": public_key,
                 "Timestamp": request.META.get("Timestamp"),
@@ -38,7 +38,7 @@ class ApexRequest:
             }
         else:
             public_key_header = request.META.get("HTTP_API_TOKEN")
-            public_key = b64decode(public_key_header)
+            public_key = b64decode(public_key_header).decode()
             return {
                 "Public-Key": public_key,
                 "Timestamp": request.META.get("HTTP_TIMESTAMP"),

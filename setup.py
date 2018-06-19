@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name="apex_auth",
-    version="0.1.4",
+    version="0.1.5",
     author="Andréas Kühne",
     author_email="andreas.kuhne@promoteint.com",
     description="",
