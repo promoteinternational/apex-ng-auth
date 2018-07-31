@@ -14,12 +14,12 @@ class ApexRequest:
     def create_request_headers(public_key: str, private_key: str, data: Optional[dict]) -> dict:
         timestamp = datetime.utcnow().isoformat()
 
-        encoded_body = hashlib.sha256((json.dumps(data) if data else "").encode()).digest()
+        encoded_body = hashlib.sha256((json.dumps(data) if data else "").encode()).hexdigest()
 
         signature = hashlib.sha256((public_key +
-                                    str(encoded_body) +
+                                    encoded_body +
                                     timestamp +
-                                    private_key).encode()).digest()
+                                    private_key).encode()).hexdigest()
         return {
             "Signature": b64encode(signature).decode(),
             "Timestamp": timestamp,
@@ -49,17 +49,17 @@ class ApexRequest:
     def signature_is_valid(request: Union[HttpRequest, Request], public_key: str, private_key: str, timestamp: str,
                            actual_signature: str) -> bool:
         if request.method == "GET":
-            encoded_body = hashlib.sha256(b"").digest()
+            encoded_body = hashlib.sha256(b"").hexdigest()
         else:
             if isinstance(request, HttpRequest):
-                encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
+                encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).hexdigest()
             else:
-                encoded_body = hashlib.sha256(json.dumps(request.data).encode()).digest()
+                encoded_body = hashlib.sha256(json.dumps(request.data).encode()).hexdigest()
 
         signature = hashlib.sha256(
             (public_key +
              str(encoded_body) +
              timestamp +
-             private_key).encode()).digest()
+             private_key).encode()).hexdigest()
 
         return actual_signature == b64encode(signature).decode()
