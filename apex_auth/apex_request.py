@@ -19,7 +19,7 @@ class ApexRequest:
         signature = hashlib.sha256((public_key +
                                     encoded_body +
                                     timestamp +
-                                    private_key).encode()).hexdigest()
+                                    private_key).encode()).hexdigest().encode()
         return {
             "Signature": b64encode(signature).decode(),
             "Timestamp": timestamp,
@@ -58,8 +58,8 @@ class ApexRequest:
 
         signature = hashlib.sha256(
             (public_key +
-             str(encoded_body) +
+             encoded_body +
              timestamp +
-             private_key).encode()).hexdigest()
+             private_key).encode()).hexdigest().encode()
 
         return actual_signature == b64encode(signature).decode()
