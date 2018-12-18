@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="db" uuid="795e9f4d-6630-4d8f-b752-501dc7f49acc">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
     </data-source>
   </component>
 </project>

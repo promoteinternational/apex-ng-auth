@@ -14,7 +14,7 @@ class ApexRequest:
     def create_request_headers(public_key: str, private_key: str, data: Optional[dict]) -> dict:
         timestamp = datetime.utcnow().isoformat()
 
-        encoded_body = hashlib.sha256((json.dumps(data) if data is None else "").encode()).digest()
+        encoded_body = hashlib.sha256((json.dumps(data if data is not None else {})).encode()).digest()
 
         signature = hashlib.sha256((public_key +
                                     str(encoded_body) +
@@ -48,13 +48,10 @@ class ApexRequest:
     @staticmethod
     def signature_is_valid(request: Union[HttpRequest, Request], public_key: str, private_key: str, timestamp: str,
                            actual_signature: str) -> bool:
-        if request.method == "GET":
-            encoded_body = hashlib.sha256(b"").digest()
+        if isinstance(request, HttpRequest):
+            encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
         else:
-            if isinstance(request, HttpRequest):
-                encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).digest()
-            else:
-                encoded_body = hashlib.sha256(json.dumps(request.data).encode()).digest()
+            encoded_body = hashlib.sha256(json.dumps(request.data).encode()).digest()
 
         signature = hashlib.sha256(
             (public_key +
