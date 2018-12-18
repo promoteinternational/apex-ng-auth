@@ -17,9 +17,9 @@ class ApexRequest:
         encoded_body = hashlib.sha256((json.dumps(data if data is not None else {})).encode()).digest()
 
         signature = hashlib.sha256((public_key +
-                                    str(encoded_body) +
+                                    encoded_body +
                                     timestamp +
-                                    private_key).encode()).digest()
+                                    private_key).encode()).hexdigest().encode()
         return {
             "Signature": b64encode(signature).decode(),
             "Timestamp": timestamp,
@@ -55,8 +55,8 @@ class ApexRequest:
 
         signature = hashlib.sha256(
             (public_key +
-             str(encoded_body) +
+             encoded_body +
              timestamp +
-             private_key).encode()).digest()
+             private_key).encode()).hexdigest().encode()
 
         return actual_signature == b64encode(signature).decode()
