@@ -1,12 +1,8 @@
-from typing import Optional, Union
-from datetime import datetime
 import hashlib
 import json
-
 from base64 import b64encode, b64decode
-
-from django.http.request import HttpRequest
-from rest_framework.request import Request
+from datetime import datetime
+from typing import Optional
 
 
 class ApexRequest:
@@ -27,31 +23,30 @@ class ApexRequest:
         }
 
     @staticmethod
-    def get_validation_headers(request: Union[HttpRequest, Request]) -> dict:
-        if isinstance(request, HttpRequest):
-            public_key_header = request.META.get("API-Token")
+    def get_validation_headers(headers: dict) -> dict:
+        if ApexRequest.check_headers(headers, ["API-Token", "Timestamp", "Signature"]):
+            public_key_header = headers.get("API-Token")
             public_key = b64decode(public_key_header).decode()
             return {
                 "Public-Key": public_key,
-                "Timestamp": request.META.get("Timestamp"),
-                "Signature": request.META.get("Signature")
+                "Timestamp": headers.get("Timestamp"),
+                "Signature": headers.get("Signature")
+            }
+        elif ApexRequest.check_headers(headers, ["HTTP_API_TOKEN", "HTTP_TIMESTAMP", "HTTP_SIGNATURE"]):
+            public_key_header = headers.get("HTTP_API_TOKEN")
+            public_key = b64decode(public_key_header).decode()
+            return {
+                "Public-Key": public_key,
+                "Timestamp": headers.get("HTTP_TIMESTAMP"),
+                "Signature": headers.get("HTTP_SIGNATURE")
             }
         else:
-            public_key_header = request.META.get("HTTP_API_TOKEN")
-            public_key = b64decode(public_key_header).decode()
-            return {
-                "Public-Key": public_key,
-                "Timestamp": request.META.get("HTTP_TIMESTAMP"),
-                "Signature": request.META.get("HTTP_SIGNATURE")
-            }
+            return {}
 
     @staticmethod
-    def signature_is_valid(request: Union[HttpRequest, Request], public_key: str, private_key: str, timestamp: str,
+    def signature_is_valid(data: Optional[dict], public_key: str, private_key: str, timestamp: str,
                            actual_signature: str) -> bool:
-        if isinstance(request, HttpRequest):
-            encoded_body = hashlib.sha256(json.dumps(request.POST).encode()).hexdigest()
-        else:
-            encoded_body = hashlib.sha256(json.dumps(request.data).encode()).hexdigest()
+        encoded_body = hashlib.sha256(json.dumps(data if data is not None else {}).encode()).hexdigest()
 
         signature = hashlib.sha256(
             (public_key +
@@ -60,3 +55,7 @@ class ApexRequest:
              private_key).encode()).hexdigest().encode()
 
         return actual_signature == b64encode(signature).decode()
+
+    @staticmethod
+    def check_headers(headers, required_headers):
+        return all([headers.get(header) for header in required_headers])
